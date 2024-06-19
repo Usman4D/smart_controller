@@ -27,7 +27,8 @@ dependencies:
     path: packages/virtual_controller
   window_size:
     git:
-      url: git://github.com/google/flutter-desktop-embedding.git
+      #url: git://github.com/google/flutter-desktop-embedding.git
+      url: https://github.com/google/flutter-desktop-embedding.git
       path: plugins/window_size
   build_runner: ^2.0.5
   cupertino_icons: ^1.0.2
