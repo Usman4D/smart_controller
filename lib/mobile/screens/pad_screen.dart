@@ -184,7 +184,7 @@ class _PadScreenState extends State<PadScreen> {
                     onStateChanged: (state) =>
                         controller.sendBTNCommand(BTNCode.BTN_Y, state),
                   ),
-                  SizedBox(height: 60),
+                  SizedBox(height: 70),
                   ControllerButton.text(
                     text: 'A',
                     color: Colors.green,

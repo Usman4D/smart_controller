@@ -44,8 +44,8 @@ class ControllerButtonSquare extends StatelessWidget {
       onTapUp: (_) => onStateChanged(false),
       onTapCancel: () => onStateChanged(false),
       child: Container(
-        width: radius ?? 180,
-        height: radius ?? 60,
+        width: radius ?? 360,
+        height: radius ?? 70,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: color ?? Theme.of(context).primaryColor,
