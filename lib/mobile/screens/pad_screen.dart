@@ -62,9 +62,12 @@ class _PadScreenState extends State<PadScreen> {
 
   Widget _buildBody(BuildContext context, PadController controller) {
     if (!controller.isPaused)
+    {
       controller.sendABSCommand(AbsoluteCode.ABS_RX, 0.0);
       controller.sendABSCommand(AbsoluteCode.ABS_RY, 0.0);
       return _buildPadState(context, controller);
+    }
+      
     else
       return Center(
         child: QText(
