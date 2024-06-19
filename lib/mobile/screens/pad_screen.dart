@@ -4,6 +4,7 @@ import 'package:smart_controller/core/widgets/text.dart';
 import 'package:smart_controller/mobile/controllers/pad_controller.dart';
 import 'package:smart_controller/mobile/entities/server_entity.dart';
 import 'package:smart_controller/mobile/widgets/pad_parts/controller_button.dart';
+import 'package:smart_controller/mobile/widgets/pad_parts/controller_button_square.dart';
 import 'package:smart_controller/mobile/widgets/pad_parts/touch_pad.dart';
 import 'package:virtual_controller/virtual_controller.dart';
 
@@ -42,7 +43,8 @@ class _PadScreenState extends State<PadScreen> {
 
             return Scaffold(
               floatingActionButton: FloatingActionButton(
-                onPressed: () => controller.disconnect(),
+                //onPressed: () => controller.disconnect(),
+                onPressed: () => {},
                 child: Icon(Icons.exit_to_app_rounded),
               ),
               body: SafeArea(
@@ -102,14 +104,14 @@ class _PadScreenState extends State<PadScreen> {
            Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  ControllerButton.text(
+                  ControllerButtonSquare.text(
                     text: 'TL',
                     color: Colors.yellow,
                     onStateChanged: (state) =>
                         controller.sendBTNCommand(BTNCode.BTN_TL, state),
                   ),
-                  SizedBox(height: 60),
-                  ControllerButton.text(
+                  SizedBox(height: 10),
+                  ControllerButtonSquare.text(
                     text: 'TL2',
                     color: Colors.green,
                     onStateChanged: (state) =>
@@ -120,14 +122,14 @@ class _PadScreenState extends State<PadScreen> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  ControllerButton.text(
+                  ControllerButtonSquare.text(
                     text: 'TR',
                     color: Colors.yellow,
                     onStateChanged: (state) =>
                         controller.sendBTNCommand(BTNCode.BTN_TR, state),
                   ),
-                  SizedBox(height: 60),
-                  ControllerButton.text(
+                  SizedBox(height: 10),
+                  ControllerButtonSquare.text(
                     text: 'TR2',
                     color: Colors.green,
                     onStateChanged: (state) =>
