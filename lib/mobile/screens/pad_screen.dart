@@ -93,7 +93,7 @@ class _PadScreenState extends State<PadScreen> {
       height: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
