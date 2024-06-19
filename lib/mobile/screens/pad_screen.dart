@@ -91,7 +91,11 @@ class _PadScreenState extends State<PadScreen> {
   Widget _buildPadState(BuildContext context, PadController controller) {
     return Container(
       height: double.infinity,
-      child: Row(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -157,6 +161,51 @@ class _PadScreenState extends State<PadScreen> {
           ),
         ],
       ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+           Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ControllerButton.text(
+                    text: 'TL',
+                    color: Colors.yellow,
+                    onStateChanged: (state) =>
+                        controller.sendBTNCommand(BTNCode.BTN_TL, state),
+                  ),
+                  SizedBox(height: 60),
+                  ControllerButton.text(
+                    text: 'TL2',
+                    color: Colors.green,
+                    onStateChanged: (state) =>
+                        controller.sendBTNCommand(BTNCode.BTN_TL2, state),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ControllerButton.text(
+                    text: 'TR',
+                    color: Colors.yellow,
+                    onStateChanged: (state) =>
+                        controller.sendBTNCommand(BTNCode.BTN_TR, state),
+                  ),
+                  SizedBox(height: 60),
+                  ControllerButton.text(
+                    text: 'TR2',
+                    color: Colors.green,
+                    onStateChanged: (state) =>
+                        controller.sendBTNCommand(BTNCode.BTN_TR2, state),
+                  ),
+                ],
+              ),
+        ],
+      ),
+      ],
+      ),
+      
     );
   }
 }
