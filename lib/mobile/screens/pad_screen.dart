@@ -147,8 +147,8 @@ class _PadScreenState extends State<PadScreen> {
             diameter: 200,
             stickDiameter: 60,
             onPositionChanged: (position) {
-              controller.sendABSCommand(AbsoluteCode.ABS_X, position.dx);
-              controller.sendABSCommand(AbsoluteCode.ABS_Y, position.dy);
+              controller.sendABSCommand(AbsoluteCode.ABS_X, position.dx-1.0);
+              controller.sendABSCommand(AbsoluteCode.ABS_Y, position.dy-1.0);
             },
           ),
           ControllerButton(
