@@ -40,8 +40,8 @@ class _PadScreenState extends State<PadScreen> {
         builder: (context, watch, _) {
           try {
             final controller = watch(padControllerProvider);
-            controller.sendABSCommand(AbsoluteCode.ABS_RX, -0.5);
-            controller.sendABSCommand(AbsoluteCode.ABS_RY, -0.5);
+            controller.sendABSCommand(AbsoluteCode.ABS_RX, -0.125);
+            controller.sendABSCommand(AbsoluteCode.ABS_RY, -0.125);
 
             return Scaffold(
               floatingActionButton: FloatingActionButton(
