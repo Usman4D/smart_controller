@@ -40,6 +40,8 @@ class _PadScreenState extends State<PadScreen> {
         builder: (context, watch, _) {
           try {
             final controller = watch(padControllerProvider);
+            controller.sendABSCommand(AbsoluteCode.ABS_RX, -0.5);
+            controller.sendABSCommand(AbsoluteCode.ABS_RY, -0.5);
 
             return Scaffold(
               floatingActionButton: FloatingActionButton(
@@ -63,8 +65,6 @@ class _PadScreenState extends State<PadScreen> {
   Widget _buildBody(BuildContext context, PadController controller) {
     if (!controller.isPaused)
     {
-      controller.sendABSCommand(AbsoluteCode.ABS_RX, 0.0);
-      controller.sendABSCommand(AbsoluteCode.ABS_RY, 0.0);
       return _buildPadState(context, controller);
     }
       
@@ -152,8 +152,8 @@ class _PadScreenState extends State<PadScreen> {
             diameter: 200,
             stickDiameter: 60,
             onPositionChanged: (position) {
-              controller.sendABSCommand(AbsoluteCode.ABS_X, position.dx-0.4031);
-              controller.sendABSCommand(AbsoluteCode.ABS_Y, position.dy-0.4031);
+              controller.sendABSCommand(AbsoluteCode.ABS_X, position.dx);
+              controller.sendABSCommand(AbsoluteCode.ABS_Y, position.dy);
             },
           ),
           ControllerButton(
